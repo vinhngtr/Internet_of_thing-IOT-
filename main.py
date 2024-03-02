@@ -2,7 +2,7 @@ import sys
 from Adafruit_IO import MQTTClient
 import time
 import random
-from uart import *
+# from uart import *
 
 AIO_FEED_IDs = ["nutnhan1", "sensor_iot1", "sensor_iot2", "sensor_iot3"]
 AIO_USERNAME = "vinhtrong782002"
@@ -58,26 +58,26 @@ counter = 10
 sensor_type = 0
 
 while True:
-    # counter = counter -1
-    # if counter <= 0:
-    #     counter = 10
-    #     print("Random data is publishing.....")
-    #     if sensor_type == 0:
-    #         print("Temperature.....")
-    #         temp = random.randint(10, 20)
-    #         client.publish("Temperature", temp)
-    #         sensor_type = 1
-    #     elif sensor_type == 1:
-    #         print("Humi.....")
-    #         humi = random.randint(50, 70)
-    #         client.publish("Humidity", humi)
-    #         sensor_type = 2
-    #     elif sensor_type == 2:
-    #         print("Light.....")
-    #         light = random.randint(100, 500)
-    #         client.publish("Light", light) 
-    #         sensor_type = 0
+    counter = counter -1
+    if counter <= 0:
+        counter = 10
+        print("Random data is publishing.....")
+        if sensor_type == 0:
+            print("Temperature.....")
+            temp = random.randint(10, 20)
+            client.publish("Temperature", temp)
+            sensor_type = 1
+        elif sensor_type == 1:
+            print("Humi.....")
+            humi = random.randint(50, 70)
+            client.publish("Humidity", humi)
+            sensor_type = 2
+        elif sensor_type == 2:
+            print("Light.....")
+            light = random.randint(100, 500)
+            client.publish("Light", light) 
+            sensor_type = 0
     
-    readSerial(client)
+    # readSerial(client)
     time.sleep(1)
-    # pass
+    pass
