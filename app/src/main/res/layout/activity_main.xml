@@ -12,7 +12,19 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
-        android:background="#7CB9E8">
+        android:background="#FF4500	"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="SMART HOME IOT - BKU"
+            android:textColor="#FFF"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:paddingTop="20dp"
+            />
     </LinearLayout>
     <!--     Set Layout thứ 2  -->
     <LinearLayout
@@ -26,79 +38,136 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="50">
+            android:layout_weight="50"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#483D8B"
+                android:text="Nhiệt độ đo được là:"
+                android:textSize="20dp"
+                android:textColor="#FFF"
+                android:textAlignment="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginRight="10dp"/>
             <TextView
                 android:id="@+id/tempera"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#76BB68"
-                android:text="50*C"
+                android:text="Hiển thị nhiệt độ(°C)"
+                android:fontFamily="sans-serif-medium"
                 android:textColor="#FFF"
-                android:textSize="50dp"
+                android:textSize="40dp"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:layout_margin="15dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 />
         </LinearLayout>
 <!--        Show độ ẩm -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="50">
-
+            android:layout_weight="50"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#483D8B"
+                android:text="Độ ẩm đo được là:"
+                android:textSize="20dp"
+                android:textColor="#FFF"
+                android:textAlignment="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="10dp"/>
             <TextView
                 android:id="@+id/humidity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#BCB19F"
-                android:text="40%"
+                android:text="Hiển thị độ ẩm(%)"
+                android:fontFamily="sans-serif-medium"
                 android:textColor="#FFF"
-                android:textSize="50dp"
+                android:textSize="40dp"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:layout_margin="15dp"/>
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                />
+
         </LinearLayout>
 
+    </LinearLayout>
+
+
+    <!--    Set layout TITLE BUTTON-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#7B68EE"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ĐIỀU KHIỂN TỪ XA"
+            android:textColor="#FFF"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            />
     </LinearLayout>
 
 <!--    Set layout thứ 3 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="20">
+        android:layout_weight="15">
 
         <ToggleButton
-            android:id="@+id/sw_bump"
+            android:id="@+id/sw_temp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="40dp"
+            android:layout_margin="20dp"
             android:checked="false"
-            android:textOff="Tắt máy bơm"
-            android:textOn="Bật máy bơm" />
+            android:textOff="Bật điều hòa nhiệt độ"
+            android:textOn="Tắt điều hòa nhiệt độ"
+            android:textSize="20dp"/>
 
     </LinearLayout>
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100" />
 
 <!--    Set layout thứ 4 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="20">
+        android:layout_weight="15">
         <ToggleButton
-            android:id="@+id/sw_led"
+            android:id="@+id/sw_hudmi"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="40dp"
+            android:layout_margin="20dp"
             android:checked="false"
-            android:textOff="Tắt đèn"
-            android:textOn="Bật đèn" />
+            android:textOff="Bật điều hòa độ ẩm"
+            android:textSize="20dp"
+            android:textOn="Tắt điều hòa độ ẩm" />
 
     </LinearLayout>
 
-<!--    Set layout footer-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10">
-    </LinearLayout>
+
 
 </LinearLayout>

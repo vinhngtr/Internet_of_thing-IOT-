@@ -19,15 +19,15 @@ import java.nio.charset.Charset;
 public class MainActivity extends AppCompatActivity {
     MQTTHelper mqttHelper;
     TextView txtTemp, txtHumi;
-    ToggleButton btnLed, btnBump;
+    ToggleButton btnTemp, btnHudmi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         txtTemp = findViewById(R.id.tempera);
         txtHumi = findViewById(R.id.humidity);
-        btnBump = findViewById(R.id.sw_bump);
-        btnLed = findViewById(R.id.sw_led);
+        btnTemp = findViewById(R.id.sw_temp);
+        btnHudmi = findViewById(R.id.sw_hudmi);
         CompoundButton.OnCheckedChangeListener listener =
                 new CompoundButton.OnCheckedChangeListener() {
                     @Override
@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 };
 
-        btnLed.setOnCheckedChangeListener(listener);
-        btnBump.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        btnTemp.setOnCheckedChangeListener(listener);
+        btnHudmi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b == true){
@@ -90,15 +90,15 @@ public class MainActivity extends AppCompatActivity {
                     txtHumi.setText(message.toString() + "%");
                 }else if(topic.contains("nutnhan1")){
                     if(message.toString().equals("1")){
-                        btnLed.setChecked(true);
+                        btnTemp.setChecked(true);
                     }else{
-                        btnLed.setChecked(false);
+                        btnTemp.setChecked(false);
                     }
                 }else if(topic.contains("nutnhan2")){
                     if(message.toString().equals("1")){
-                        btnBump.setChecked(true);
+                        btnHudmi.setChecked(true);
                     }else{
-                        btnBump.setChecked(false);
+                        btnHudmi.setChecked(false);
                     }
                 }
             }
