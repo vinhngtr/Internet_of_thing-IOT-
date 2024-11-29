@@ -25,5 +25,6 @@ trong căn phòng.
 với ứng dụng thông minh ở phía người dùng(Client)**.
 
 ## IMAGE DEMO SẢN PHẨM
+![Giao diện app demo](https://github.com/vinhngtr/Internet_of_thing-IOT-/blob/Mini_project/giao_dien.PNG?raw=true)
 
 [Báo cáo hoàn thiện sản phẩm](https://drive.google.com/file/d/1f5EM0vB0sJRjTm5rKLj_L6MhmLbMisxG/view?usp=sharing)
